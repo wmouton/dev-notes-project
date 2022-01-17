@@ -3,7 +3,8 @@ import { Note } from '../models/note.model';
 import Notes from './Notes';
 
 interface INotesListProps {
-  notes: Note[];
+  notes: Note[],
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>
 }
 
 const NotesList: React.FunctionComponent<INotesListProps> = ({ notes }) => {
