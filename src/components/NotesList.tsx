@@ -7,10 +7,13 @@ interface INotesListProps {
 }
 
 const NotesList: React.FunctionComponent<INotesListProps> = ({ notes }) => {
-  const renderNotes = ():JSX.Element[] => {
-      return notes.map(note => {
-          return <Notes key={note.id} note={note} />
-      })
+  const handleDelete = (id: string) => {
+    console.log('The note to be deleted', id);
+  };
+  const renderNotes = (): JSX.Element[] => {
+    return notes.map(note => {
+      return <Notes key={note.id} note={note} handleDelete={handleDelete} />;
+    });
   };
 
   return (
