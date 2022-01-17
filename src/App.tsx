@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 // import NotFound from './components/NotFound';
 import { Note } from './components/models/note.model';
+import NotesList from './components/NotesList';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const App: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([
@@ -20,6 +22,13 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
+      <Container>
+        <Row>
+          <Col>
+            <NotesList />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
