@@ -5,7 +5,7 @@ interface INotesListProps {
   notes: Note[];
 }
 
-const NotesList: React.FunctionComponent<INotesListProps> = props => {
+const NotesList: React.FunctionComponent<INotesListProps> = ({ notes }) => {
   return (
     <>
       <h2 className='mt-3'>Notes</h2>
