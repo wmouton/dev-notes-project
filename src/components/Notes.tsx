@@ -1,7 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+import { Note } from '../models/note.model';
 
-const Notes = () => {
-  return <div>Notes</div>;
+interface INotesProps {
+  note: Note;
+}
+
+const Notes: React.FunctionComponent<INotesProps> = props => {
+  return <div>Note Card</div>;
 };
 
 export default Notes;
