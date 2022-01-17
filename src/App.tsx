@@ -22,7 +22,7 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
-      <Container>
+      <Container className='mt-5'>
         <Row>
           <Col>
             <NotesList />
