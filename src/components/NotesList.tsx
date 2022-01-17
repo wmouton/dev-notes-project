@@ -7,7 +7,7 @@ interface INotesListProps {
 }
 
 const NotesList: React.FunctionComponent<INotesListProps> = ({ notes }) => {
-  const renderNotes = () => {
+  const renderNotes = ():JSX.Element[] => {
       return notes.map(note => {
           return <Notes key={note.id} note={note} />
       })
