@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 
-const Header = () => {
-  return (
-    <div>
-      <h1>Header</h1>
-    </div>
+interface IHeaderProps {}
+
+const Header: React.FunctionComponent<IHeaderProps> = props => {
+  return(
+    <div></div>
   );
-};
+}
 
 export default Header;
