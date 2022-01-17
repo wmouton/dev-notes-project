@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // Components
 import Header from './components/Header';
 // import NotFound from './components/NotFound';
-import { Note } from './components/models/note.model';
+import { Note } from './models/note.model';
 import NotesList from './components/NotesList';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -25,7 +25,7 @@ const App: React.FC = () => {
       <Container className='mt-5'>
         <Row>
           <Col>
-            <NotesList />
+            <NotesList notes={ notes}/>
           </Col>
         </Row>
       </Container>

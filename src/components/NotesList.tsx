@@ -1,13 +1,14 @@
 import React from 'react';
+import { Note } from '../models/note.model';
 
-interface INotesListProps {}
+interface INotesListProps {
+  notes: Note[];
+}
 
 const NotesList: React.FunctionComponent<INotesListProps> = props => {
   return (
     <>
-      <h2 className='mt-3'>
-          Notes
-      </h2>
+      <h2 className='mt-3'>Notes</h2>
     </>
   );
 };
