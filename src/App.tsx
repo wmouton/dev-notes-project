@@ -14,13 +14,7 @@ interface Note {
 }
 
 const App: React.FC = () => {
-  const [notes, setNotes] = useState<{
-    id:string,
-    title:string,
-    text:string,
-    color:string,
-    date:string
-  }[]>([{
+  const [notes, setNotes] = useState<Note[]>([{
     id: (new Date()).toString(),
     title: 'Applications',
     text: 'Schedule application launch.',
