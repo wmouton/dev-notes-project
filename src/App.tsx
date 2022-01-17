@@ -4,23 +4,18 @@ import React, { useState } from 'react';
 // Components
 import Header from './components/Header';
 // import NotFound from './components/NotFound';
-
-interface Note {
-  id:string,
-  title:string,
-  text:string,
-  color:string,
-  date:string
-}
+import { Note } from './components/models/note.model';
 
 const App: React.FC = () => {
-  const [notes, setNotes] = useState<Note[]>([{
-    id: (new Date()).toString(),
-    title: 'Applications',
-    text: 'Schedule application launch.',
-    color: '#dfdfdf',
-    date: (new Date()).toString()
-  }]);
+  const [notes, setNotes] = useState<Note[]>([
+    {
+      id: new Date().toString(),
+      title: 'Applications',
+      text: 'Schedule Application Deployment.',
+      color: '#dfdfdf',
+      date: new Date().toString(),
+    },
+  ]);
 
   return (
     <div className='App'>
