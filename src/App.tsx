@@ -5,6 +5,14 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 // import NotFound from './components/NotFound';
 
+interface Note {
+  id:string,
+  title:string,
+  text:string,
+  color:string,
+  date:string
+}
+
 const App: React.FC = () => {
   const [notes, setNotes] = useState<{
     id:string,
