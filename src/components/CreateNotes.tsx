@@ -9,10 +9,14 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = () => {
   const textRef = React.useRef<HTMLTextAreaElement | null>(null);
   const colorRef = React.useRef<HTMLInputElement | null>(null);
 
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
+    
+  }
+
   return (
     <>
       <h2>Create Notes</h2>
-      <Form className='mt-3 mb-3'>
+      <Form className='mt-3 mb-3' onSubmit={ (e) =>handleSubmit(e) }>
         <Form.Group className='mb-3' controlId='formBasicTitle'>
           <Form.Label>Title</Form.Label>
           <Form.Control
