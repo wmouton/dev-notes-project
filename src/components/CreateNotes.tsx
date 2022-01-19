@@ -5,21 +5,22 @@ import Button from 'react-bootstrap/Button';
 interface ICreateNotesProps {}
 
 const CreateNotes: React.FunctionComponent<ICreateNotesProps> = () => {
+  const [error, setError] = React.useState<string>('');
   const titleRef = React.useRef<HTMLInputElement | null>(null);
   const textRef = React.useRef<HTMLTextAreaElement | null>(null);
   const colorRef = React.useRef<HTMLInputElement | null>(null);
 
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    if(titleRef.current.value === '' || textRef.current.value === '') {
-      return
+    if (titleRef.current?.value === '' || textRef.current?.value === '') {
+      return setError('All fields are mandatory.');
     }
-  }
+  };
 
   return (
     <>
       <h2>Create Notes</h2>
-      <Form className='mt-3 mb-3' onSubmit={ (e) =>handleSubmit(e) }>
+      <Form className='mt-3 mb-3' onSubmit={e => handleSubmit(e)}>
         <Form.Group className='mb-3' controlId='formBasicTitle'>
           <Form.Label>Title</Form.Label>
           <Form.Control
