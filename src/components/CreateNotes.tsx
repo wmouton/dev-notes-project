@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Form } from 'react-bootstrap';
+import { Alert, Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Note } from '../models/note.model';
 
@@ -40,6 +40,7 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
   return (
     <>
       <h2>Create Notes</h2>
+      {error && <Alert variant='danger'>{error}</Alert>}
       <Form className='mt-3 mb-3' onSubmit={e => handleSubmit(e)}>
         <Form.Group className='mb-3' controlId='formBasicTitle'>
           <Form.Label>Title</Form.Label>
