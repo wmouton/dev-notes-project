@@ -33,6 +33,8 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
         date: new Date().toString(),
       },
     ]);
+    (titleRef.current as HTMLInputElement).value = '';
+    (textRef.current as HTMLTextAreaElement).value = '';
   };
 
   return (
@@ -68,9 +70,9 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
             ref={colorRef}
           />
         </Form.Group>
-        <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+        {/* <Form.Group className='mb-3' controlId='formBasicCheckbox'>
           <Form.Check type='checkbox' label='Check me out' />
-        </Form.Group>
+        </Form.Group> */}
         <Button variant='primary' type='submit'>
           Submit
         </Button>
