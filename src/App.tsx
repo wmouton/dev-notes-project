@@ -27,7 +27,11 @@ const App: React.FC = () => {
         <Row>
           <Col>
             <NotesList notes={ notes} setNotes={ setNotes }/>
-            <CreateNotes/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <CreateNotes notes={ notes} setNotes={ setNotes }/>
           </Col>
         </Row>
       </Container>
