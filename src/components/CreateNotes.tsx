@@ -10,7 +10,10 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = () => {
   const colorRef = React.useRef<HTMLInputElement | null>(null);
 
   const handleSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
-    
+    e.preventDefault();
+    if(titleRef.current.value === '' || textRef.current.value === '') {
+      return
+    }
   }
 
   return (
